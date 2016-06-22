@@ -17,6 +17,8 @@ app.get('/', function(req, res) {
 
 app.use('/tacos', require('./controllers/tacos'));
 
-var server = app.listen(process.env.PORT || 3000);
+// if (!module.parent) {
+  var server = app.listen(process.env.PORT || 3000);
+// }
 
 module.exports = server;
